@@ -1,0 +1,531 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* по умолчанию */
+}
+body {
+	line-height: 1;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/* ------------------------------ */
+
+/*
+border
+Универсальное свойство border позволяет одновременно 
+установить толщину, 
+стиль и цвет границы вокруг элемента.
+border: 1px solid #000; (размер стиль цвет)
+Основные стили -solid dotted dashed double
+
+Синтаксис общего свойства:
+border: толщина_линии стиль_линии цвет_линии
+
+*/
+/*
+outline
+Универсальное свойство, одновременно устанавливающее цвет, 
+стиль и толщину внешней границы на всех четырех сторонах элемента. 
+В отличие от линии, задаваемой через border, свойство outline 
+не влияет на положение блока и его ширину. 
+Также нельзя задать параметры линии на отдельных сторонах элемента, 
+outline применяется сразу ко всем четырём сторонам.
+*/
+
+/*
+border-radius
+Устанавливает радиус скругления уголков блока.
+border-radius:50%; - кргуг
+Можно использовать вместе с overflow: hidden;
+*/
+
+/*
+box-shadow
+Добавляет тень к элементу.
+box-shadow: сдвиг_по_гориз сдвиг_по_верт радиус расстояние
+Флаг inset для установки внутренней тени
+Можно добавить много теней. На тень влияет свойство border-radius.
+filter: drop-shadow(0px 0px 10px #77608d);
+*/
+
+/*
+opacity
+Определяет уровень прозрачности элемента.
+Отличие opacity:0; от display:none; в том что блок 
+не убирается из верстки а только становиться прозрачным, 
+то есть занимаемое им место остается. Так же, 
+с прозрачными элементами все еще можно взаимодействовать, 
+например кликать по ссылкам.
+*/
+/*
+visibility
+Предназначен для отображения или скрытия элемента.
+Отличие visibility: hidden; от display:none; в том что блок 
+не убирается из верстки а только скрывается, 
+то есть занимаемое им место остается.
+Отличие visibility: hidden; от opacity:0;
+ в том что блок скрывается и взаимодействовать с ним нельзя.
+*/
+/*
+.text-link {
+	color: green;
+	border-bottom: 2px dotted;
+	display: inline-block;
+}
+.text-link:hover {
+	color: red;
+}
+*/
+/*
+.link {
+	display: inline-block;
+	background-color: #794f45;
+	display: inline-block;
+	color: #fff;
+	padding: 15px;
+	border: 5px solid red;
+}
+.link:hover {
+	border: 5px solid transparent;
+}
+*/
+
+/* 
+.block {
+	padding: 20px;
+	margin: 0px 0px 30px 0px;
+}
+.block__title {
+	font-weight: 700;
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+.block__body {
+}
+*/
+/*
+vertical-align - выравнивает строчные 
+и блочно-строчные объекты по вертикали
+top - по верху
+middle - по центру
+bottom - по низу
+*/
+
+/*
+Схлопывание внешнего отступа происходит 
+только с блочными объектами
+*/
+/*
+.block__texts {
+	font-size: 0;
+}
+
+.block__items {
+	font-size: 0;
+}
+.block__item {
+	display: inline-block;
+	max-width: 200px;
+	max-height: 200px;
+	overflow: hidden;
+	padding: 15px;
+	background-color: #794f45;
+	color: #fff;
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.span {
+	display: block;
+}
+.link {
+	margin: 0px 0px 20px 0px;
+	display: inline-block;
+}
+.text {
+	display: inline-block;
+	max-width: 100px;
+	background-color: #77608d;
+	padding: 10px;
+	font-size: 16px;
+	margin: 0px 30px 0px 0px;
+}
+
+.block__one,
+.block__two {
+	padding: 30px;
+	color: #fff;
+	font-size: 24px;
+}
+
+.block__one {
+	background-color: #794f45;
+}
+.block__two {
+	background-color: #7a956b;
+	margin: -50px 0px 0px 0px;
+}
+
+.big-text {
+	max-height: 200px;
+	background-color: #77608d;
+	padding: 30px;
+	display: block;
+	font-size: 30px;
+	color: #fff;
+	line-height: 120%;
+	overflow: auto;
+}
+*/
+
+.wrapper {
+	max-width: 900px;
+	overflow: auto;
+}
+
+.main__block {
+	background: rgba(185, 187, 61, 0.63);
+	margin: 5px;
+	padding: 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: justify;
+}
+.block {
+	max-width: 300px;
+	max-height: 300px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: darkblue;
+	color: darkgray;
+	margin: 0 auto;
+}
+.string {
+	display: inline-block;
+	margin: 0 0 30px 0;
+	border-bottom: 1px solid #000;
+	max-width: 400px;
+}
+.link {
+	display: inline-block;
+	margin: 0px auto 30px auto;
+	color: rgb(189, 60, 124);
+	border: 2px solid rgb(26, 24, 136);
+	padding: 2px;
+}
+
+.img {
+	margin: 0 0 30px 0;
+	width: 100%;
+}
+.picture {
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+.p__link2 {
+	width: 50%;
+	margin: 0 0 30px 0;
+	opacity: 60%;
+}
+
+/* -----test 2 ---------- */
+
+.main__block1 {
+	background-color: bisque;
+	margin: 5px;
+	padding: 5px;
+	text-align: right;
+}
+.block1 {
+	background: salmon;
+	max-width: 80%;
+	padding: 10px;
+
+	margin: 5px auto 30px auto;
+	box-shadow: inset 1px 1px 5px 5px #483;
+}
+
+.string__block {
+	background: rgb(109, 223, 128);
+	padding: 5px;
+}
+
+.string1a,
+.string1c {
+	max-width: 40%;
+	color: blue;
+	display: block;
+	margin: 0 auto 0 0;
+	border: 2px solid #000;
+	text-align: justify;
+}
+
+.string1b,
+.string1d {
+	color: rgb(221, 13, 204);
+	max-width: 40%;
+	display: inline-block;
+	text-align: left;
+	border: 2px solid #000;
+	margin: -50px 0 0 0;
+	text-align: justify;
+}
+
+.link1 {
+	display: inline-block;
+	margin: 10px auto 10px 0;
+	background-color: orange;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.img {
+	max-width: 100%;
+}
+
+.p__link3 {
+	display: none;
+}
+
+/* ______________________________ */
+
+.main__block2 {
+	background: paleturquoise;
+	padding: 5px;
+	text-align: center;
+}
+.block2 {
+	max-width: 500px;
+	font-size: 20px;
+	border-top: 2px solid blue;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+.string__block2 {
+	border-left: 10px dashed yellowgreen;
+}
+
+.format .string2a {
+	display: block;
+	text-align: justify;
+	text-transform: uppercase;
+	margin: 0 auto 10px auto;
+	max-width: 250px;
+	padding: 10px 0;
+	border-bottom: 2px double blueviolet;
+	border-top: 2px double blueviolet;
+}
+
+.string2b {
+	display: block;
+	font-style: italic;
+	text-align: center;
+}
+.string2c {
+	display: block;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-transform: lowercase;
+	border: 5px solid black;
+	border-radius: 85% 15% 93% 7% / 32% 88% 12% 68%;
+}
+.string2d {
+	display: block;
+	box-shadow: 1px 2px 3px 5px coral;
+	max-width: 300px;
+	margin: 20px auto;
+}
+.link2 {
+	display: block;
+	max-width: 120px;
+
+	margin: 0 auto 30px auto;
+	border: 3px solid red;
+	padding: 10px;
+	outline: 6px solid gold;
+	box-shadow: inset 3px 3px 3px 3px gold;
+}
+.img2 {
+	display: inline;
+	max-width: 300px;
+	outline: 3px solid grey;
+}
+.picture2 {
+	display: inline;
+	max-width: 150px;
+	outline: 3px solid grey;
+}
+.p__link4 {
+	display: inline-block;
+	max-width: 150px;
+	outline: 3px solid grey;
+	margin: 0 0 30px 0;
+}
+/* _________________________ */
+
+.main__block3 {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: rgba(128, 128, 128, 0.37);
+	padding: 10px;
+	text-align: left;
+	margin: 0 0 30px;
+}
+.block3 {
+	margin: 0 auto 30px auto;
+	overflow: auto;
+	max-height: 90px;
+	max-width: 500px;
+}
+.string__block3 {
+	background: grey;
+	color: white;
+	display: inline-block;
+	padding: 10px 10px 5px 5px;
+	margin: 0 0 30px 0;
+}
+
+.string3a {
+	color: wheat;
+	display: inline-block;
+	text-align: right;
+	line-height: 25px;
+}
+.string3b {
+	opacity: 0.5;
+	display: inline-block;
+	line-height: 25px;
+}
+.string3c {
+	display: inline-block;
+	opacity: 0.8;
+	line-height: 25px;
+	line-height: 25px;
+}
+
+.link__item {
+	display: inline-block;
+	background-color: yellowgreen;
+	border-radius: 5px;
+	padding: 1px 2px;
+	line-height: 25px;
+}
+.string3d {
+	display: inline-block;
+	line-height: 25px;
+}
+
+.link3 {
+	display: inline-block;
+	background-color: yellowgreen;
+	border-radius: 5px;
+}
+
+.picture3 {
+	max-width: 100%;
+	display: inline-block;
+	margin: 0 0 30px 0;
+}
+
+.p__link5 {
+	max-width: 100%;
+	opacity: 0.6;
+}
+
+.second__part {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.header {
+	margin: 0 auto 30px auto;
+}
+
+.title__home-work {
+	margin: 0 0 30px 0;
+	font-size: 24px;
+}
+
+.home__work2 {
+	border: 3px solid #483;
+	margin: 0 auto 30px auto;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+	/* overflow: auto; */
+}
+.home__work3,
+.text__p {
+	opacity: 0.5;
+	text-align: justify;
+	max-width: 80%;
+	margin: 0 auto;
+	margin: 0 auto 30px auto;
+}
+
+.text__span {
+	display: inline-block;
+	border: 3px solid #000;
+	margin: 0 0 30px 0;
+}
+
+.block__border {
+	border-top: 5px solid darkgreen;
+	border-left: 6px dashed rgb(156, 37, 37);
+	border-bottom: 5px double rgb(77, 41, 134);
+	border-right: 10px dotted goldenrod;
+	margin: 0 0 30px 0;
+}
+
+.home__work6 {
+	padding: 1px;
+}
+
+.link__shadow {
+	display: inline-block;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	margin: 0 0 30px 0;
+	background-color: grey;
+	padding: 2px 2px;
+	border-radius: 5px;
+	box-shadow: 1px 3px 4px 4px rgb(77, 41, 134);
+}
